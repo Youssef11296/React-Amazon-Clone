@@ -1,5 +1,7 @@
 .checkout {
     display: flex;
+    min-height: 100vh;
+    background-color: #fff;
 }
 
 .checkout__left {
@@ -9,7 +11,7 @@
 
 .checkout .checkout__left img {
     width: 100%;
-    height: 200px;
+    height: 160px;
     object-fit: fill;
     margin-bottom: 10px;
 }
@@ -17,4 +19,16 @@
 .checkout__title {
     padding: 1rem;
     border-bottom: 1px solid lightgray;
+}
+
+@media screen and (max-width:900px) {
+    .checkout {
+        flex-direction: column;
+    }
+    .checkout__left {
+        order: 1;
+    }
+    .checkout .checkout__left>img {
+        display: none;
+    }
 }

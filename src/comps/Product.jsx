@@ -3,7 +3,7 @@ import React from "react";
 import { useStateValue } from "../context/StateProvider";
 
 const Product = ({ id, title, price, rating, image }) => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue();
 
   const addToBasket = () => {
     dispatch({

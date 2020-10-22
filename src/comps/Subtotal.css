@@ -30,4 +30,15 @@
 
 .subtotal input {
     margin: 0 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:900px) {
+    .subtotal {
+        width: 50%;
+        margin: 1rem auto;
+    }
+    .subtotal__gift {
+        font-size: .8rem;
+    }
 }
