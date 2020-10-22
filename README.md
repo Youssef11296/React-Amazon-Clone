@@ -18,6 +18,20 @@ It'd Been Built Through Several Parts To Be More Close To The Real App :
 
 - React Context API
 
+## `Part Two`
+
+### `Main Dependencies & Techs`
+
+- Firebase
+
+- Firebase Authentication
+
+- Hosting Online (On Firebase)
+
+## `Checking & Trying It Online`
+
+This App Is Deployed & Hosted Here : https://clone-17d9f.web.app/
+
 ## Available Scripts
 
 In the project directory, you can run:

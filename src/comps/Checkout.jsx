@@ -5,12 +5,13 @@ import { useStateValue } from "../context/StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 
 const Checkout = () => {
-  const [{ basket }] = useStateValue();
+  const [{ basket, user }] = useStateValue();
 
   return (
     <div className="checkout">
       <div className="checkout__left">
         <img src="https://www.adweek.com/wp-content/uploads/2020/02/coronavirus-amazon-shopping-behavior-CONTENT-2020.jpg" />
+        {user && <h3>Hello, {user?.email}.substring(0, 4)</h3>}
         <h2 className="checkout__title">
           Your shopping basket
           {basket.length === 0 && (

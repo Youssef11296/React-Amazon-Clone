@@ -6,10 +6,17 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "../context/StateProvider";
 import MenuIcon from "@material-ui/icons/Menu";
 import { IconButton } from "@material-ui/core";
+import { auth } from "../firebase/Config";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  const handleAuth = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
 
   return (
     <div className="header">
@@ -35,10 +42,11 @@ const Header = () => {
         >
           <div
             className="header__option"
+            onClick={handleAuth}
             style={{ textDecoration: "none", outline: "none" }}
           >
-            <small>Hello Gest</small>
-            <strong>Sign In</strong>
+            <small>Hello, {user ? user.email.substring(0, 4) : "Guest"}</small>
+            <strong>{!user ? "Sign In" : "Sign Out"}</strong>
           </div>
         </Link>
         <Link

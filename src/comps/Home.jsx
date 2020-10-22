@@ -10,6 +10,7 @@ const Home = () => {
       <div className="home__row">
         <Product
           id="1"
+          key="1"
           title="Product One"
           price="200.99"
           rating={5}
@@ -17,6 +18,7 @@ const Home = () => {
         />
         <Product
           id="2"
+          key="2"
           title="Product Two"
           price="280.99"
           rating={3}
@@ -26,6 +28,7 @@ const Home = () => {
       <div className="home__row">
         <Product
           id="3"
+          key="3"
           title="product Three"
           price="120.99"
           rating={4}
@@ -33,6 +36,7 @@ const Home = () => {
         />
         <Product
           id="4"
+          key="4"
           title="product Four"
           price="300.99"
           rating={2}
@@ -40,6 +44,7 @@ const Home = () => {
         />
         <Product
           id="5"
+          key="5"
           title="product Five"
           price="299.99"
           rating={5}
@@ -49,6 +54,7 @@ const Home = () => {
       <div className="home__row">
         <Product
           id="6"
+          key="6"
           title="product Six"
           price="400.99"
           rating={4}
