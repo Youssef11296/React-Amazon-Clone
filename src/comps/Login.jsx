@@ -6,6 +6,7 @@ import { auth } from "../firebase/Config";
 const Login = () => {
   const history = useHistory();
   const [email, setEmail] = useState("");
+  const [address, setAddress] = useState("");
   const [passowrd, setPassword] = useState("");
 
   const signIn = (e) => {
@@ -35,20 +36,34 @@ const Login = () => {
 
   return (
     <div className="login">
-      <img src="" className="login__logo" />
+      <Link to="/">
+        <img
+          src="https://i.pinimg.com/originals/31/d1/3c/31d13c99ee841869ca44ef54ba956272.png"
+          className="login__logo"
+        />
+      </Link>
       <div className="login__container">
         <form>
           <div className="login__formInput">
             <label>E-mail</label>
             <input
+              required
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="login__formInput">
+            <label>Address</label>
+            <input
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+          </div>
+          <div className="login__formInput">
             <label>Password</label>
             <input
+              required
               type="password"
               value={passowrd}
               onChange={(e) => setPassword(e.target.value)}
@@ -58,13 +73,13 @@ const Login = () => {
             Sign in
           </button>
         </form>
-      </div>
-      <div className="login__createAccount">
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus
-          nostrum recusandae, ex aliquam esse excepturi dolores!
-        </p>
-        <button onClick={register}>Create an Amazon account</button>
+        <div className="login__createAccount">
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus
+            nostrum recusandae, ex aliquam esse excepturi dolores!
+          </p>
+          <button onClick={register}>Create an Amazon account</button>
+        </div>
       </div>
     </div>
   );

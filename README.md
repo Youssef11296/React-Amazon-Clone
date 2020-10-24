@@ -18,6 +18,10 @@ It'd Been Built Through Several Parts To Be More Close To The Real App :
 
 - React Context API
 
+- React Currency Format
+
+- CSS Responsive Design (Flex Boxes)
+
 ## `Part Two`
 
 ### `Main Dependencies & Techs`
@@ -27,6 +31,8 @@ It'd Been Built Through Several Parts To Be More Close To The Real App :
 - Firebase Authentication
 
 - Hosting Online (On Firebase)
+
+- React Flip Move
 
 ## `Checking & Trying It Online`
 

@@ -38,7 +38,7 @@ const Header = () => {
         <Link
           className="header__link"
           onClick={() => setShowMenu((prevState) => !prevState)}
-          to="/login"
+          to={!user && "/login"}
         >
           <div
             className="header__option"
